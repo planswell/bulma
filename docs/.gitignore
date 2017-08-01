@@ -1,7 +1,6 @@
 # Files
 .DS_Store
 .jekyll-metadata
-_config.local.yml
 _config.version.yml
 bulma-test.sass
 bulma-website-local.sass
