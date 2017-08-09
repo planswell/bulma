@@ -3,14 +3,14 @@ layout: default
 route: example-page
 ---
 
-<section class="section main-column onboarding-column">
+<section class="section main-column">
   <div class="header">
     <div class="header-inner">
       <div class="logo planswell-portfolios"></div>
       <a href="#" class="contact-text-link">Contact us</a>
     </div>
   </div>
-  <div class="section inner-column">
+  <div class="section inner-column onboarding-column">
     <div class="container">
       <div class="back-button-wrapper">
         <a class="back-button"></a>
@@ -28,7 +28,7 @@ route: example-page
                 <label for="rrsp">RRSP</label>
                 <div class="value-right">
                   <label class="dollar-input">$</label>
-                  <input type="number" placeholder="768" id="rrsp-value">
+                  <input type="number" class="three-figure-value" placeholder="768" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
                   <label class="per-month">/per month</label>
                 </div>
               </div>
@@ -37,7 +37,7 @@ route: example-page
                 <label for="tfsa">TFSA</label>
                 <div class="value-right">
                   <label class="dollar-input">$</label>
-                  <input type="number" placeholder="448" id="tfsa-value">
+                  <input type="number" class="three-figure-value" placeholder="448" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="tfsa-value">
                   <label class="per-month">/per month</label>
                 </div>
               </div>
@@ -46,7 +46,7 @@ route: example-page
                 <label for="resp">RESP</label>
                 <div class="value-right">
                   <label class="dollar-input">$</label>
-                  <input type="number" placeholder="116" id="rrsp-value">
+                  <input type="number" class="three-figure-value" placeholder="116" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
                   <label class="per-month">/per month</label>
                 </div>
               </div>
