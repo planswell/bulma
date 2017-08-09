@@ -1,0 +1,651 @@
+// Set the Planswell override variables here
+//==================//
+// Global
+//==================//
+html, body {
+  height: 100%;
+  background-color: $white-smoke;
+}
+
+.logo {
+  position: absolute;
+  float: left;
+  top: calc(50% - 6px);
+  width: 168px;
+  height: 21px;
+  background-image: $planswell-logo;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.planswell-portfolios {
+    background-image: $planswell-portfolios-logo;
+  }
+}
+
+//==================//
+// Typography
+//==================//
+
+h1, h2, h3, h4, h5, p {margin-bottom: 0.75rem;}
+
+h1, h2, h3, h4 { line-height: $line-height-small; font-weight: $weight-bold;}
+h4, h5, p {line-height: $line-height-large;}
+
+h1, h2, h3, h4 { color: $black; }
+h5 { color: $grey; }
+p { color: $grey-dark; }
+
+h1 { font-size: $size-1; }
+h2 { font-size: $size-2; }
+h3 { font-size: $size-3; }
+h4 { font-size: $size-4; }
+h5 { font-size: $size-6; }
+p  { font-size: $size-5; }
+
+//Text Utility classes
+.italic {font-style: italic;}
+.weight-regular {font-weight: $weight-normal;}
+.grey-darker {color: $grey-darker;}
+.grey-dark {color: $grey-dark;}
+.grey {color: $grey;}
+.grey-light {color: $grey-light;}
+.bottom-buffer {
+  margin-bottom: 0.95em;
+  &.buffer-large {
+    margin-bottom: 1.65em;
+  }
+}
+
+a {
+  .grey-text-link { color: $grey-light; }
+  .investment-text-link { color: $investments; }
+}
+
+//==================//
+//Structure & Grid
+//==================//
+.header {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem 1.5rem 1.5rem;
+  border-bottom: 1px solid $white-smoke;
+
+  .header-inner {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .contact-text-link {
+      display: inline-block;
+      color: $grey-light;
+      text-decoration: underline;
+      float: right;
+    }
+  }
+}
+
+section{
+  &.main-column {
+    display: block;
+    background-color: $white;
+    max-width: 660px;
+    width: 660px;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: $box-shadow;
+  }
+
+  &.onboarding-column {
+    margin-bottom: 175px;
+  }
+
+  .inner-column {
+    padding: 1.85rem 3.65rem 4rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+.modal-wrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.90);
+  height: inherit;
+  width: inherit;
+  z-index: 9;
+
+  .modal-window {
+    position: relative;
+    width: 480px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.75rem 2.5rem 2.5rem;
+    z-index: 11;
+    top: 10%;
+    background-color: $white;
+    border-radius: $radius-small;
+
+    h4 {
+      text-align: center;
+    }
+
+    h5 {
+      margin-top: 1rem;
+      color: $grey-light;
+      text-align: center;
+    }
+
+    textarea {
+      font-size: $size-5;
+      color: $grey-dark;
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid $grey-lighter;
+      border-radius: $radius-small;
+      margin-bottom: 1rem;
+      transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
+      &:focus {
+        box-shadow: 0;
+        outline: none;
+        border-color: $primary;
+      }
+
+      &::placeholder {
+        color: $grey-lighter;
+      }
+    }
+
+    button {
+      min-width: 160px;
+      border-radius: $radius;
+      outline: none;
+      margin-right: 6px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.back-button-wrapper {
+  display: block;
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 2.15rem;
+  text-align: left;
+
+  .back-button {
+    content: $back-arrow;
+    float: left;
+    width: 22px;
+    height: 16px;
+    transform: translate(0px);
+    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+    &:hover {
+      transform: translate(-5px);
+    }
+  }
+}
+
+.survey-footer {
+  width: inherit;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem 3.65rem 7.75rem 3.65rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+
+  .progress-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background-color: $white-smoke;
+  }
+
+  .progress-tip {
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+    font-size: $size-6;
+    color: $grey-lighter;
+  }
+}
+
+//==================//
+//Buttons
+//==================//
+
+//Button types
+button,
+.button{
+  background-color: $primary;
+  color: $white;
+  height: 2.85rem;
+  font-size: $size-5;
+  line-height: 100%;
+  border-radius: $radius;
+  padding-left: $button-padding-left-default;
+  padding-right: $button-padding-left-default;
+  padding-top: calc(0.4rem - 1px);
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
+  &:hover {
+    background-color: $primary-dark;
+    color: $white;
+  }
+}
+
+//Outlined-button
+.is-outlined {
+  background-color: transparent !important;
+  color: $primary;
+  border: 1px solid $primary;
+
+  &:hover {
+    color: $primary-dark;
+    border-color: $primary-dark;
+  }
+
+  &.is-investments {
+    color: $investments;
+    border-color: $investments;
+
+    &:hover {
+      color: $investments-hover;
+      border-color: $investments-hover;
+    }
+  }
+  &.is-insurance {
+    color: $insurance-dark;
+    border-color: $insurance;
+
+    &:hover {
+      border-color: $insurance-dark;
+    }
+  }
+  &.is-borrowing {
+    color: $borrowing-dark;
+    border-color: $borrowing;
+
+    &:hover {
+      border-color: $insurance-dark;
+    }
+  }
+}
+
+//Button colour variations
+.is-investments {
+  background-color: $investments;
+  &:hover {
+    background-color: $investments-hover;
+    color: $white;
+  }
+}
+.is-insurance {
+  background-color: $insurance;
+  &:hover {
+    background-color: $insurance-hover;
+    color: $white;
+  }
+}
+.is-borrowing {
+  background-color: $borrowing-dark;
+  &:hover {
+    background-color: $borrowing-hover;
+    color: $white;
+  }
+}
+
+.button-next-wrapper {
+  display: block;
+  height: 48px;
+  margin-bottom: 1.25rem;
+
+  .is-button-next {
+    position: relative;
+    float: right;
+    padding-right: 1.45rem;
+
+    &::after {
+      content: '→';
+      padding-left: 6px;
+    }
+  }
+}
+
+//==================//
+//Elements
+//==================//
+
+//Boxes
+.box {
+  &.ordered-box {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  &.is-three-quarter-width{
+    width: 75%;
+  }
+}
+
+// Fields
+.field {
+  margin-bottom: 0rem;
+  padding: 1.15em 0;
+  height: auto;
+
+  &.ordered-field {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .input-note {
+    font-size: $size-6;
+    margin-top: 1.15rem;
+    color: $grey-lighter;
+    margin-bottom: 0.5em;
+  }
+}
+
+.field:not(:last-child) {
+  margin-bottom: 0;
+  border-bottom: 1px solid $grey-lighter;
+}
+.field:first-child {
+  padding-top: 0;
+}
+.field:last-child {
+  padding-bottom: 0px;
+}
+
+// Radio inputs
+label {
+  font-size: $size-5;
+  color: $grey-dark;
+  height: auto;
+  transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+  &:hover {
+    color: $grey-darker;
+  }
+  &.figure-right {
+    display: inline-block;
+    color: $grey-darker;
+    float: right;
+
+    &.is-goals {
+      display: inline-block;
+      font-size: $size-6;
+      width: 50%;
+      height: auto;
+
+      .root-goal {
+        font-weight: $weight-bold;
+      }
+    }
+  }
+}
+//Form elements
+//
+//Text inputs
+  .value-right {
+    display: inline-block;
+    float: right;
+
+    & label.per-month {
+      color: $grey-lighter;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border: none;
+    border-bottom: 1px solid $grey-lighter;
+    font-size: $size-5;
+    min-width: 55px;
+    width: 55px;
+    margin-right: 6px;
+    color: $primary-dark;
+    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
+    &::placeholder {
+      color: $grey-lighter;
+    }
+
+    &:focus {
+      box-shadow: 0;
+      outline: none;
+      border-bottom: 1px solid $primary;
+    }
+  }
+
+  .dollar-input {
+    font-size: $size-5;
+    color: $grey-dark;
+    font-weight: $weight-bold;
+  }
+
+//Checkbox inputs
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.35em;
+    height: 1.35em;
+    border: 2px solid $grey-lighter;
+    background: #fff;
+    border-radius: 1.25em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.01);
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 0.35rem;
+    left: .55em;
+    font-size: .75rem;
+    line-height: 0.8;
+    color: $white;
+    transition: all 200ms;
+  }
+
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before {
+    background-color: $white;
+  }
+
+  [type="checkbox"]:checked:focus + label:before {
+    background-color: $primary;
+  }
+
+  [type="checkbox"]:not(:checked):focus + label:before,
+  [type="checkbox"]:not(:checked):focus {
+    background-color: $primary;
+  }
+
+//===============
+// Media Queries
+//===============
+
+// Footer height queries
+@media screen and (min-height: 867px) and (max-height: 1900px) {
+  section {
+    &.onboarding-column {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-height: 767px) {
+  .survey-footer {
+    padding-bottom: 3rem;
+  }
+}
+
+//Responsive Queries
+
+//Tablet - Onboarding
+@media screen and (max-width: $tablet-onboarding) {
+  //Typography
+  h1     { font-size: $size-2; }
+  h2     { font-size: $size-3; }
+  h3     { font-size: $size-4; }
+  h4     { font-size: $size-5; }
+  h5     { font-size: $size-6; }
+  p      { font-size: $size-6; }
+  label  { font-size: $size-6; }
+
+  //Layout
+  section{
+    &.main-column {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &.onboarding-column {
+      margin-bottom: 165px;
+    }
+
+    .inner-column {
+      padding: 1.25rem 2.65rem 3rem;
+    }
+  }
+
+  .box {
+    &.is-three-quarter-width{
+      width: 100%;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: $mobile) {
+  //Global
+  //Structure & Layout
+  .header {
+    .header-inner {
+      .logo {
+        top: calc(50% - 6px);
+        width: 152px;
+        height: 18px;
+      }
+
+      .contact-text-link {
+        font-size: $size-6;
+      }
+    }
+  }
+
+  section{
+    &.onboarding-column {
+      margin-bottom: 150px;
+    }
+
+    .inner-column {
+      padding: 1.25rem 1.85rem 3rem;
+      overflow: scroll;
+    }
+  }
+
+  .field {
+    &.ordered-field {
+      padding-left: 1.15rem;
+    }
+  }
+
+  .box {
+    padding: $box-padding-mobile;
+  }
+
+  .survey-footer {
+    padding: 1.35rem 1.85rem 3rem;
+
+    .button-next-wrapper {
+      height: 38px;
+      margin-bottom: 0.75rem;
+    }
+    .progress-bar {
+      height: 6px;
+    }
+  }
+
+  //Elements
+  .button {
+    height: 2.35rem;
+    font-size: $size-6;
+    border-radius: $radius;
+    padding-left: $button-padding-left-small;
+    padding-right: $button-padding-left-small;
+
+    &.is-button-next {
+      padding-right: 1.15rem;
+    }
+  }
+
+  .back-button-wrapper {
+    margin-bottom: 1.5rem;
+    .back-button {
+      width: 19px;
+      height: 14px;
+    }
+  }
+
+  //Form fields
+  input[type="text"],
+  input[type="number"] {
+    font-size: $size-6;
+  }
+
+  input[type="number"] {
+    min-width: 48px;
+    width: 48px;
+  }
+}
