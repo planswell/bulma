@@ -12,7 +12,11 @@ $tablet-onboarding: 660px;
 //==================//
 $planswell-logo: url('/images/planswell-logo-green.svg');
 $planswell-portfolios-logo: url('/images/pp-logo.svg');
+//icons
 $back-arrow: url('/images/arrow-left-grey.svg');
+$plus-icon: url('/images/plus-icon-grey.svg');
+$check-mark-white: url('/images/check-mark-white.svg');
+$tool-tip-grey: url('/images/tool-tip-icon.svg');
 
 //==================//
 // Typography
@@ -29,6 +33,7 @@ $size-6: 0.95rem;
 $size-7: 0.75rem;
 
 //Line-heights
+$line-height-normal: 140%;
 $line-height-large: 145%;
 $line-height-small: 125%;
 
@@ -36,6 +41,9 @@ $line-height-small: 125%;
 //==================//
 //Colour variables
 //==================//
+//Default colours
+$green: hsl(149, 76%, 37%);
+$red: hsl(17, 78%, 54%);
 
 //Brand colours
 $primary: hsl(149, 76%, 37%);
@@ -62,7 +70,7 @@ $white-smoke: hsl(180, 7%, 97%);
 //Buttons
 //==================//
 //Radius sizes
-$radius-small: 0.45rem;
+$radius-small: 2.15rem;
 $radius: 2.85rem;
 $radius-large: 2.85rem;
 

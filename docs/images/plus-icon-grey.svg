@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="9px" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Plus symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PlanswellPortfolios-Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PP---Account-opening" transform="translate(-647.000000, -533.000000)" fill="#A6AFB0">
+            <g id="Other-accounts" transform="translate(470.000000, 524.000000)">
+                <g id="Plus-symbol" transform="translate(177.000000, 9.000000)">
+                    <path d="M5,4 L5,0 L4,0 L4,4 L0,4 L0,5 L4,5 L4,9 L5,9 L5,5 L9,5 L9,4 L5,4 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

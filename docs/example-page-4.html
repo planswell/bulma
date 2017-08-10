@@ -19,6 +19,11 @@ route: example-page
       <p class="bottom-buffer buffer-large">
         Based on your Planswell financial plan, we have highlighted the investment accounts that allign with your needs.
       </p>
+      <!-- Account detail headings -->
+      <div class="table-heading-wrapper">
+        <h5>Account type</h5>
+        <h5>Monthly contribution</h5>
+      </div>
       <div class="box ordered-box">
         <div class="media-content">
           <div class="content">
@@ -26,42 +31,94 @@ route: example-page
               <div class="field ordered-field">
                 <input type="checkbox" id="rrsp" checked>
                 <label for="rrsp">RRSP</label>
+                <!--Tool tip-->
+                <div class="is-tool-tip">
+                  <span class="tooltiptext">
+                    An RRSP benefits you in two ways. One, any contributions to your RRSP decrease your taxable income amount saving you on taxes. And two, your gains are super rad brah!
+                  </span>
+                </div>
+                <!-- End tooltip -->
                 <div class="value-right">
                   <label class="dollar-input">$</label>
-                  <input type="number" class="three-figure-value" placeholder="768" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
-                  <label class="per-month">/per month</label>
+                  <input type="number" class="three-figure-value erroroneous-value" placeholder="768" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
+                  <label class="per-month">/month</label>
                 </div>
+              </div>
+              <div class="field ordered-field error-field">
+                <p>$40000 per month towards your RRSP seems a bit off. Are you sure this is right? <a href="#">$40000 is correct</a><a href="#">Discuss with a plan pro</a></p>
               </div>
               <div class="field ordered-field">
                 <input type="checkbox" id="tfsa" checked>
                 <label for="tfsa">TFSA</label>
+                <!--Tool tip-->
+                <div class="is-tool-tip">
+                  <span class="tooltiptext">
+                    An RRSP benefits you in two ways. One, any contributions to your RRSP decrease your taxable income amount saving you on taxes. And two, your gains are super rad brah!
+                  </span>
+                </div>
+                <!-- End tooltip -->
                 <div class="value-right">
                   <label class="dollar-input">$</label>
                   <input type="number" class="three-figure-value" placeholder="448" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="tfsa-value">
-                  <label class="per-month">/per month</label>
+                  <label class="per-month">/month</label>
                 </div>
               </div>
               <div class="field ordered-field">
                 <input type="checkbox" id="resp" checked>
                 <label for="resp">RESP</label>
+                <!--Tool tip-->
+                <div class="is-tool-tip">
+                  <span class="tooltiptext">
+                    An RRSP benefits you in two ways. One, any contributions to your RRSP decrease your taxable income amount saving you on taxes. And two, your gains are super rad brah!
+                  </span>
+                </div>
+                <!-- End tooltip -->
                 <div class="value-right">
                   <label class="dollar-input">$</label>
                   <input type="number" class="three-figure-value" placeholder="116" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
-                  <label class="per-month">/per month</label>
+                  <label class="per-month">/month</label>
                 </div>
               </div>
               <div class="field ordered-field">
                 <input type="checkbox" id="non-registered">
                 <label for="non-registered">Non-registered</label>
+                <!--Tool tip-->
+                <div class="is-tool-tip">
+                  <span class="tooltiptext">
+                    An RRSP benefits you in two ways. One, any contributions to your RRSP decrease your taxable income amount saving you on taxes. And two, your gains are super rad brah!
+                  </span>
+                </div>
+                <!-- End tooltip -->
               </div>
             </div>
           </div>
-        </div>
+        </div><!-- end box -->
+          <a href="#" class="additional-toggle">Add other account types</a>
+          <div class="wrapper">
+            <a href="#" class="button is-outlined is-grey is-small">
+              RRIF
+              <span class="icon icon-right">
+                  <i class="fa fa-plus"></i>
+              </span>
+            </a>
+            <a href="#" class="button is-outlined is-grey is-small">
+              LIRA
+              <span class="icon icon-right">
+                  <i class="fa fa-plus"></i>
+              </span>
+            </a>
+            <a href="#" class="button is-outlined is-grey is-small">
+              RESP
+              <span class="icon icon-right">
+                  <i class="fa fa-plus"></i>
+              </span>
+            </a>
+          </div>
       </div>
     </div><!-- end section inner column -->
   <div class="survey-footer">
     <div class="button-next-wrapper">
-      <a class="button is-investments is-button-next">Next</a>
+      <a href="/example-page-modal" class="button is-investments is-button-next">Next</a>
     </div>
     <div class="progress-bar"></div>
     <span class="progress-tip">2/20 - Question name</span>
