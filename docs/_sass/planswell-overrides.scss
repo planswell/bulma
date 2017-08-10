@@ -526,7 +526,7 @@ button,
   width: 1rem;
   height: 1rem;
   margin-left: 0.30rem;
-  background-image: url('/images/tool-tip-icon.svg');
+  background-image: url('/images/tool-tip-icon-grey.svg');
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -545,7 +545,7 @@ button,
   border-radius: 6px;
   box-shadow: $box-shadow;
   margin-top: -50px;
-  z-index: 9;
+  z-index: 10;
 }
 
 // Show on hover
