@@ -46,8 +46,13 @@ $green: hsl(149, 76%, 37%);
 $red: hsl(17, 78%, 54%);
 
 //Brand colours
+//Primary
+$black: hsl(190, 5%, 25%);
+$white: #fff;
 $primary: hsl(149, 76%, 37%);
 $primary-dark: hsl(149, 78%, 33%);
+
+//Secondary
 $investments: hsl(213, 81%, 46%);
 $investments-hover: hsl(213, 81%, 38%);
 $insurance: hsl(17, 78%, 54%);
@@ -56,20 +61,20 @@ $insurance-hover: hsl(17, 78%, 48%);
 $borrowing: hsl(38, 100%, 64%);
 $borrowing-dark: hsl(38, 77%, 55%);
 $borrowing-hover: hsl(38, 77%, 48%);
+$teal: hsl(174, 56%, 68%);
 
 //Neutrals
-$black: hsl(190, 5%, 25%);
 $grey-dark: hsl(188, 4%, 44%);
 $grey: hsl(193, 4%, 55%);
 $grey-light: hsl(186, 6%, 67%);
 $grey-lighter: hsl(195, 9%, 83%);
-$white: #fff;
 $white-smoke: hsl(180, 7%, 97%);
 
 //==================//
 //Buttons
 //==================//
 //Radius sizes
+$radius-tiny: 0.375rem;
 $radius-small: 2.15rem;
 $radius: 2.85rem;
 $radius-large: 2.85rem;
@@ -84,8 +89,9 @@ $button-padding-right-small: 1.25rem;
 //==================//
 //Elements
 //==================//
-$box-radius: 0.375rem;
+$box-radius: $radius-tiny;
 $box-shadow: 0 2px 14px rgba($black, 0.15);
+$box-padding-small: 0.85rem;
 $box-padding: 1.15rem;
 $box-padding-mobile: 1rem;
 

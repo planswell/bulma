@@ -22,14 +22,15 @@ route: example-page
       <!-- Account detail headings -->
       <div class="table-heading-wrapper">
         <h5>Account type</h5>
-        <h5>Monthly contribution</h5>
+        <h5 class="lock-right">Your Contribution</h5>
+        <h5 class="recommendation-label">Recommendation</h5>
       </div>
       <div class="box ordered-box">
         <div class="media-content">
           <div class="content">
             <form action="#">
               <div class="field ordered-field">
-                <input type="checkbox" id="rrsp" checked>
+                <input type="checkbox" id="rrsp">
                 <label for="rrsp">RRSP</label>
                 <!--Tool tip-->
                 <div class="is-tool-tip">
@@ -39,16 +40,17 @@ route: example-page
                 </div>
                 <!-- End tooltip -->
                 <div class="value-right">
+                  <span class="recommendation-value">$468</span>
                   <label class="dollar-input">$</label>
-                  <input type="number" class="three-figure-value erroroneous-value" placeholder="768" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
+                  <input type="number" class="three-figure-value erroroneous-value" placeholder="868" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
                   <label class="per-month">/month</label>
                 </div>
               </div>
               <div class="field ordered-field error-field">
-                <p>$40000 per month towards your RRSP seems a bit off. Are you sure this is right? <a href="#">$40000 is correct</a><a href="#">Discuss with a plan pro</a></p>
+                <p>$868 per month towards your RRSP seems a bit off. Are you sure this is right? <a href="#">$868 is correct</a><a href="#">Discuss with a plan pro</a></p>
               </div>
               <div class="field ordered-field">
-                <input type="checkbox" id="tfsa" checked>
+                <input type="checkbox" id="tfsa">
                 <label for="tfsa">TFSA</label>
                 <!--Tool tip-->
                 <div class="is-tool-tip">
@@ -58,13 +60,14 @@ route: example-page
                 </div>
                 <!-- End tooltip -->
                 <div class="value-right">
+                  <span class="recommendation-value">$448</span>
                   <label class="dollar-input">$</label>
                   <input type="number" class="three-figure-value" placeholder="448" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="tfsa-value">
                   <label class="per-month">/month</label>
                 </div>
               </div>
               <div class="field ordered-field">
-                <input type="checkbox" id="resp" checked>
+                <input type="checkbox" id="resp">
                 <label for="resp">RESP</label>
                 <!--Tool tip-->
                 <div class="is-tool-tip">
@@ -74,13 +77,14 @@ route: example-page
                 </div>
                 <!-- End tooltip -->
                 <div class="value-right">
+                  <span class="recommendation-value">$116</span>
                   <label class="dollar-input">$</label>
                   <input type="number" class="three-figure-value" placeholder="116" onkeypress="this.style.width = ((this.value.length + 1) * 10) + 'px';" id="rrsp-value">
                   <label class="per-month">/month</label>
                 </div>
               </div>
               <div class="field ordered-field">
-                <input type="checkbox" id="non-registered">
+                <input type="checkbox" id="non-registered" disabled>
                 <label for="non-registered">Non-registered</label>
                 <!--Tool tip-->
                 <div class="is-tool-tip">
@@ -90,9 +94,10 @@ route: example-page
                 </div>
                 <!-- End tooltip -->
               </div>
-            </div>
+            </form>
           </div>
-        </div><!-- end box -->
+        </div>
+      </div><!-- end box -->
           <a href="#" class="additional-toggle">Add other account types</a>
           <div class="wrapper">
             <a href="#" class="button is-outlined is-grey is-small">

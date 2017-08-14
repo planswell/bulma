@@ -28,8 +28,10 @@ html, body {
 
 h1, h2, h3, h4, h5, p {margin-bottom: 0.75rem;}
 
-h1, h2, h3, h4 { line-height: $line-height-small; font-weight: $weight-bold;}
+h1, h2, h3, h4 { line-height: $line-height-small;}
 h4, h5, p {line-height: $line-height-large;}
+
+h1, h2, h3, h4, h5, h6 { font-weight: $weight-bold;}
 
 h1, h2, h3, h4 { color: $black; }
 h5 { color: $grey; }
@@ -39,26 +41,39 @@ h1 { font-size: $size-1; }
 h2 { font-size: $size-2; }
 h3 { font-size: $size-3; }
 h4 { font-size: $size-4; }
-h5 { font-size: $size-6; }
+h5 { font-size: $size-5; }
+h6 { font-size: $size-6; }
 p  { font-size: $size-5; }
 
 //Text Utility classes
 .is-centred-text {text-align: center;}
 .italic {font-style: italic;}
 .weight-regular {font-weight: $weight-normal;}
+.green-text {color: $primary;}
 .grey-darker {color: $grey-darker;}
 .grey-dark {color: $grey-dark;}
 .grey {color: $grey;}
 .grey-light {color: $grey-light;}
 .bottom-buffer {
   margin-bottom: 0.95em;
+
   &.buffer-large {
     margin-bottom: 1.65em;
   }
+
+  &.buffer-xlarge {
+    margin-bottom: $size-2;
+  }
 }
 
+//Text link style
 a {
   cursor: pointer;
+
+  &:hover {
+    color: $primary-dark;
+  }
+
   &.grey-text-link {
     color: $grey-light;
 
@@ -79,17 +94,33 @@ a {
 }
 
 .table-heading-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: block;
+  //justify-content: space-between;
+  width: inherit;
   height: auto;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
 
   h5 {
+    position: relative;
     display: inline-block;
     font-weight: $weight-bold;
     color: $grey;
     margin-bottom: 0rem;
+
+    &.lock-right {
+      float: right;
+    }
+
+    &.recommendation-label {
+      font-weight: $weight-normal;
+      color: $grey-light;
+      background-color: transparent;
+      border: 1px solid $grey-light;
+      border-radius: $radius-small;
+      padding: 0.10rem 0.65rem 0.15rem;
+      float: right;
+      margin-right: 1.5rem;
+    }
   }
 }
 
@@ -97,10 +128,13 @@ a {
 //Structure & Grid
 //==================//
 .header {
-  width: 100%;
-  height: auto;
+  position: fixed;
+  width: inherit;
+  background-color: $white;
+  height: 4.25rem;
   padding: 1.35rem 1.5rem 1.5rem;
   border-bottom: 1px solid $white-smoke;
+  z-index: 99;
 
   .header-inner {
     display: table;
@@ -132,6 +166,7 @@ section{
 
   .inner-column {
     padding: 1.85rem 3.65rem 4rem;
+    margin-top: 4.25rem;
 
     &.onboarding-column::after {
       position: relative;
@@ -181,7 +216,7 @@ section{
       width: 100%;
       padding: 0.65rem 0.85rem;
       border: 1px solid $grey-lighter;
-      border-radius: $radius-small;
+      border-radius: 6px;
       margin-bottom: 1rem;
       transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
@@ -218,6 +253,7 @@ section{
   }
 }
 
+//Back button
 .back-button-wrapper {
   display: block;
   width: 100%;
@@ -238,6 +274,7 @@ section{
   }
 }
 
+//Footer
 .survey-footer {
   width: inherit;
   background-color: rgba(255, 255, 255, 0.9);
@@ -264,6 +301,7 @@ section{
     }
   }
 
+  //Progress bar
   .progress-bar {
     position: relative;
     display: block;
@@ -452,16 +490,101 @@ button,
     padding-right: 0rem;
   }
 
+  &.is-padding-small {
+    padding-top: $box-padding-small;
+    padding-bottom: $box-padding-small;
+  }
+
+  &.is-width-auto {
+    display: inline-block;
+    width: auto;
+  }
+
   &.is-three-quarter-width{
     width: 75%;
   }
 }
 
+//Portfolio allocation
+ul.portfolio-allocation-bar {
+  width: inherit;
+  height: auto;
+  box-sizing: border-box;
+  letter-spacing: 0rem;
+  line-height: 0rem;
+  margin: 0rem;
+  padding: 0rem;
+
+  li {
+    display: inline-block;
+    width: 25%;
+    height: 1.75rem;
+
+    &:nth-child(2) {background-color: $primary;}
+    &:nth-child(3) {background-color: $black;}
+    &:nth-child(4){background-color: $teal;}
+    &:nth-child(5){background-color: $grey;}
+    &:nth-child(6){background-color: $insurance;}
+    &:nth-child(7){background-color: $borrowing;}
+    &:nth-child(8){background-color: $grey-lighter;}
+
+    //Rounded end caps
+    &:first-child {
+      background-color: $investments;
+      border-top-left-radius: $radius-tiny;
+      border-bottom-left-radius: $radius-tiny;
+    }
+
+    &:last-child {
+      border-top-right-radius: $radius-tiny;
+      border-bottom-right-radius: $radius-tiny;
+    }
+  }
+}
+
+ul.portfolio-allocation-breakdown {
+  display: block;
+  width: inherit;
+  height: auto;
+
+  li {
+    display: block;
+    margin-top: 0.35rem;
+    margin-bottom: 0.75rem;
+
+    &:first-child {
+      margin-top: 1.35rem;
+    }
+
+    &::before {
+      content: '•';
+      position: relative;
+      height: auto;
+      font-size: 2.45rem;
+      line-height: 0%;
+      border-radius: 1rem;
+      top: 0.415rem;
+      margin-right: 0.415rem;
+    }
+
+    &:first-child:before {color: $investments;}
+    &:nth-child(2):before {color: $primary;}
+    &:nth-child(3):before {color: $black;}
+    &:nth-child(4):before {color: $teal;}
+    &:nth-child(5):before {color: $grey;}
+    &:nth-child(6):before {color: $insurance;}
+    &:nth-child(7):before {color: $borrowing;}
+    &:nth-child(8):before {color: $grey-lighter;}
+  }
+}
+
 // Fields
 .field {
+  display: block;
   margin-bottom: 0rem;
   padding: 1.15em 0;
   height: auto;
+  overflow: auto;
 
   &.ordered-field {
     padding-left: 1.5rem;
@@ -495,6 +618,23 @@ button,
 
         &:last-child::after {
           margin-right: 0rem;
+        }
+      }
+    }
+
+    &.flex-justify {
+      display: flex;
+      justify-content: space-between;
+
+      label {
+        margin-right: 1.15rem;
+
+        strong {
+          color: $grey-dark;
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
@@ -542,7 +682,7 @@ button,
   line-height: $line-height-normal;
   color: $grey;
   padding: 0.85rem 1rem;
-  border-radius: 6px;
+  border-radius: $radius-tiny;
   box-shadow: $box-shadow;
   margin-top: -50px;
   z-index: 10;
@@ -578,12 +718,35 @@ button,
   }
 }
 
+textarea {
+  font-size: $size-5;
+  color: $grey-dark;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid $grey-lighter;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
+  &:focus {
+    box-shadow: 0;
+    outline: none;
+    border-color: $primary;
+  }
+
+  &::placeholder {
+    color: $grey-lighter;
+  }
+}
+
 // Radio inputs
 label {
+  display: inline-block;
   font-size: $size-5;
   color: $grey-dark;
   height: auto;
   transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
   &:hover {
     color: $grey-darker;
   }
@@ -613,6 +776,16 @@ label {
 
     & label.per-month {
       color: $grey-lighter;
+    }
+
+    .recommendation-value {
+      font-weight: $weight-normal;
+      color: $grey;
+      background-color: transparent;
+      border: 1px solid $grey-light;
+      border-radius: $radius-small;
+      padding: 0.10rem 0.65rem 0.15rem;
+      margin-right: 1rem;
     }
   }
 
@@ -694,14 +867,14 @@ label {
   }
 
   /* checked mark aspect */
-  [type="checkbox"]:not(:checked) + label:after,
+  /*[type="checkbox"]:not(:checked) + label:after,*/
   [type="checkbox"]:checked + label:after {
     position: absolute;
     content: $check-mark-white;
-    width: 17px;
-    height: 10px;
-    top: 0.05rem;
-    left: 0.15rem;
+    width: 12px;
+    height: 7px;
+    top: -0.225rem;
+    left: 0.40rem;
     transition: all 200ms;
   }
 
@@ -751,7 +924,7 @@ label {
 }
 
 //Responsive Queries
-
+//==================//
 //Tablet - Onboarding
 @media screen and (max-width: $tablet-onboarding) {
   //Typography
@@ -772,6 +945,7 @@ label {
 
     .inner-column {
       padding: 1.25rem 2.65rem 3rem;
+      margin-top: 4.25rem;
 
       &.onboarding-column::after {
         content: '';
@@ -792,6 +966,9 @@ label {
   //Global
   //Structure & Layout
   .header {
+    height: 3.75rem;
+    padding: 1.15rem 1.15rem 1.25rem;
+
     .header-inner {
       .logo {
         top: calc(50% - 6px);
@@ -808,6 +985,7 @@ label {
   section{
     .inner-column {
       padding: 1.25rem 1.85rem 3rem;
+      margin-top: 3.75rem;
       overflow: scroll;
 
       &.onboarding-column::after {
@@ -863,6 +1041,14 @@ label {
     .back-button {
       width: 19px;
       height: 14px;
+    }
+  }
+
+  .table-heading-wrapper {
+    h5 {
+      &.recommendation-label {
+        margin-right: 0rem;
+      }
     }
   }
 
