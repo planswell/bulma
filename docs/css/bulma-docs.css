@@ -1,5 +1,18 @@
 @charset "UTF-8";
-/*! bulma.io v0.5.0 | MIT License | github.com/jgthms/bulma */
+html.bulma {
+  height: 100%;
+}
+
+.bulma {
+  /*! bulma.io v0.5.0 | MIT License | github.com/jgthms/bulma */
+  /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+  /* checkbox aspect */
+  /* checked mark aspect */
+  /*[type="checkbox"]:not(:checked) + label:after,*/
+  /* checked mark aspect changes */
+  /* accessibility */
+}
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -7,10 +20,6 @@
   to {
     transform: rotate(359deg);
   }
-}
-
-.bulma {
-  /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
 }
 
 .bulma html,
@@ -8320,14 +8329,6 @@
   padding: 3rem 1.5rem 6rem;
 }
 
-.bulma {
-  /* checkbox aspect */
-  /* checked mark aspect */
-  /*[type="checkbox"]:not(:checked) + label:after,*/
-  /* checked mark aspect changes */
-  /* accessibility */
-}
-
 .bulma .highlight {
   background-color: #f5f5f5;
   color: #586e75;
@@ -10008,8 +10009,9 @@
   margin-bottom: 3rem;
 }
 
-.bulma html, .bulma body {
+.bulma body {
   height: 100%;
+  box-sizing: border-box;
   background-color: #f7f8f8;
 }
 
@@ -11148,19 +11150,4 @@
     min-width: 48px;
     width: 48px;
   }
-}
-
-:root {
-  --primary: #17a65c;
-  --gap: 0.75rem;
-}
-
-html ::-moz-selection {
-  background: #17a65c;
-  color: #fff;
-}
-
-html ::selection {
-  background: #17a65c;
-  color: #fff;
 }

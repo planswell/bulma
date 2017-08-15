@@ -1,14 +1,15 @@
-@charset "utf-8"
-
-$bootstrap: #6f5499
-$github: #333333
-$twitter: #55acee
-
-@import "../sass/utilities/initial-variables"
-@import "./_sass/planswell-variables"
-@import "../bulma"
+html.bulma
+  height: 100%;
 
 .bulma
+  @charset "utf-8"
+
+  $bootstrap: #6f5499
+  $github: #333333
+  $twitter: #55acee
+
+  @import "./_sass/planswell-variables"
+  @import "../bulma"
   @import "./_sass/highlight"
   @import "./_sass/override"
   @import "./_sass/global"
@@ -26,14 +27,4 @@ $twitter: #55acee
   @import "./_sass/bootstrap"
   @import "./_sass/planswell-overrides"
 
-\:root
-  --primary: #{$primary}
-  --gap: 0.75rem
 
-html
-  \::-moz-selection
-    background: $primary
-    color: $primary-invert
-  \::selection
-    background: $primary
-    color: $primary-invert
