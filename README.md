@@ -73,6 +73,7 @@ git push origin master
 2. Push to AWS (might not be needed unless HTML is changed)
 
 ```
+cd docs
 jekyll build
-aws s3 sync ./docs/_site s3://styleguide.planswell.ca
+aws s3 sync ./_site s3://styleguide.planswell.ca
 ```
