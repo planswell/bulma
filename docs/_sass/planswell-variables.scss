@@ -74,10 +74,12 @@ $white-smoke: hsl(180, 7%, 97%);
 //Buttons
 //==================//
 //Radius sizes
-$radius-tiny: 0.375rem;
-$radius-small: 2.15rem;
-$radius: 2.85rem;
-$radius-large: 2.85rem;
+$radius-tiny: 0rem;
+$radius-small: 0rem;
+$radius: 0rem;
+$radius-large: 0rem;
+$button-radius: 0.375rem;
+
 
 //Padding
 $button-padding-left-default: 1.75rem;
