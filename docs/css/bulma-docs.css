@@ -10009,6 +10009,10 @@ html.bulma {
   margin-bottom: 3rem;
 }
 
+.bulma html {
+  font-size: 100%;
+}
+
 .bulma body {
   height: 100%;
   box-sizing: border-box;
