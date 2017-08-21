@@ -30,7 +30,7 @@ $size-3: 1.70rem;
 $size-4: 1.35rem;
 $size-5: 1.05rem;
 $size-6: 0.95rem;
-$size-7: 0.75rem;
+$size-7: 0.85rem;
 
 //Line-heights
 $line-height-normal: 140%;
@@ -74,11 +74,11 @@ $white-smoke: hsl(180, 7%, 97%);
 //Buttons
 //==================//
 //Radius sizes
-$radius-tiny: 0rem;
 $radius-small: 0rem;
 $radius: 0rem;
 $radius-large: 0rem;
-$button-radius: 2.85rem;
+$button-radius-tiny: 0.325rem;
+$button-radius: 2.15rem;
 
 
 //Padding
@@ -91,7 +91,6 @@ $button-padding-right-small: 1.25rem;
 //==================//
 //Elements
 //==================//
-$box-radius: $radius-tiny;
 $box-shadow: 0 2px 14px rgba($black, 0.15);
 $box-padding-small: 0.85rem;
 $box-padding: 1.15rem;

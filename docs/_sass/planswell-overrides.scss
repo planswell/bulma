@@ -4,6 +4,8 @@
 //==================//
 html {
   font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   height: 100%;
@@ -351,11 +353,16 @@ button,
   }
 
   &.is-small {
-    border-radius: $radius-small;
+    border-radius: $button-radius;
     font-size: $size-6;
     height: 2.15rem;
     padding-left: $button-padding-left-small;
     padding-right: $button-padding-right-small;
+  }
+
+  &.is-large{
+    font-size: $size-4;
+    height: 2.85rem;
   }
 
   &.is-button-centred {
@@ -489,6 +496,8 @@ button,
 
 //Boxes
 .box {
+  border-radius: $button-radius-tiny;
+
   &.ordered-box {
     padding-left: 0rem;
     padding-right: 0rem;
@@ -535,13 +544,13 @@ ul.portfolio-allocation-bar {
     //Rounded end caps
     &:first-child {
       background-color: $investments;
-      border-top-left-radius: $radius-tiny;
-      border-bottom-left-radius: $radius-tiny;
+      border-top-left-radius: $button-radius-tiny;
+      border-bottom-left-radius: $button-radius-tiny;
     }
 
     &:last-child {
-      border-top-right-radius: $radius-tiny;
-      border-bottom-right-radius: $radius-tiny;
+      border-top-right-radius: $button-radius-tiny;
+      border-bottom-right-radius: $button-radius-tiny;
     }
   }
 }
@@ -686,7 +695,7 @@ ul.portfolio-allocation-breakdown {
   line-height: $line-height-normal;
   color: $grey;
   padding: 0.85rem 1rem;
-  border-radius: $radius-tiny;
+  border-radius: $button-radius-tiny;
   box-shadow: $box-shadow;
   margin-top: -50px;
   z-index: 10;
@@ -744,16 +753,18 @@ textarea {
 }
 
 // Radio inputs
-label {
+label,
+.label {
   display: inline-block;
-  font-size: $size-5;
-  color: $grey-dark;
+  font-size: $size-7;
+  color: $grey;
   height: auto;
   transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
   &:hover {
     color: $grey-darker;
   }
+
   &.figure-right {
     display: inline-block;
     color: $grey-darker;
@@ -774,7 +785,7 @@ label {
 //Form elements
 //
 //Text inputs
-  .value-right {
+.value-right {
     display: inline-block;
     float: right;
 
@@ -801,17 +812,39 @@ label {
   }
 
   input[type="text"],
-  input[type="number"] {
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  .select select {
     border: none;
     border-bottom: 1px solid $grey-lighter;
     font-size: $size-5;
-    width: 55px;
-    color: $primary-dark;
+    width: auto;
+    color: $grey-dark;
     transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
-    &.erroroneous-value {
+    &::placeholder {
+      color: $grey-lighter;
+    }
+
+    &:focus {
+      color: $grey-dark;
+      box-shadow: 0;
+      outline: none;
+      border-bottom: 1px solid $primary;
+    }
+
+    &.is-success {
+        color: $primary;
+    }
+
+    &.is-danger {
       color: $insurance-hover;
-      border-color: $insurance-hover;
+    }
+
+    &.is-success:focus,
+    &.is-danger:focus {
+      color: $grey-darker;
     }
 
     &.three-figure-value {
@@ -822,17 +855,31 @@ label {
           color: $grey-dark;
         }
     }
+  }
 
-    &::placeholder {
-      color: $grey-lighter;
-    }
+  .input[type="text-area"],
+  .textarea {
+    box-shadow: none;
+    border-color: $grey-lighter;
 
     &:focus {
-      box-shadow: 0;
-      outline: none;
-      border-bottom: 1px solid $primary;
+      color: $grey-dark;
     }
   }
+
+// Form helpers
+.help {
+  color: $grey-light;
+  margin-top: $button-radius-tiny;
+
+  &.is-success {
+      color: $primary;
+  }
+
+  &.is-danger {
+    color: $insurance-hover;
+  }
+}
 
   .dollar-input {
     font-size: $size-5;
@@ -840,73 +887,71 @@ label {
     font-weight: $weight-bold;
   }
 
-//Checkbox inputs
-  [type="checkbox"]:not(:checked),
-  [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px;
-  }
+//Checkbox & Radio inputs
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  visibility: hidden;
 
-  [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
+/*
+  & + label {
     position: relative;
-    padding-left: 1.95em;
     cursor: pointer;
+    padding: 0;
   }
 
-  /* checkbox aspect */
-  [type="checkbox"]:not(:checked) + label:before,
-  [type="checkbox"]:checked + label:before {
+  & + label:before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.35em;
-    height: 1.35em;
-    border: 2px solid $grey-lighter;
-    background: #fff;
-    border-radius: 1.25em;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,.01);
-    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1.35rem;
+    height: 1.35rem;
+    background: $white;
+    border-radius: $button-radius;
   }
+  */
+}
 
-  /* checked mark aspect */
-  /*[type="checkbox"]:not(:checked) + label:after,*/
-  [type="checkbox"]:checked + label:after {
-    position: absolute;
-    content: $check-mark-white;
-    width: 12px;
-    height: 7px;
-    top: -0.225rem;
-    left: 0.40rem;
-    transition: all 200ms;
-  }
+label {
+  &.radio,
+  &.checkbox {
+    font-size: $size-5;
+    position: relative;
+    cursor: pointer;
+    color: $grey-dark;
+    padding: 0;
 
-  /* checked mark aspect changes */
-  [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    transform: scale(0);
-  }
-  [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    transform: scale(1);
-  }
+    &::before {
+      content: '';
+      margin-right: 0.325rem;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 1.35rem;
+      height: 1.35rem;
+      background: $white;
+      border: 1px solid $grey-lighter;
+      border-radius: $button-radius;
+      padding: 0;
 
-  /* accessibility */
-  [type="checkbox"]:checked:focus + label:before {
-    background-color: $white;
+      &:checked {
+        background-color: $primary;
+      }
+    }
   }
+}
 
-  [type="checkbox"]:checked:focus + label:before {
-    background-color: $primary;
-    border-color: $primary;
-  }
+/*
+width: 1.65rem;
+height: 1.65rem;
+border: 2px solid $grey-lighter;
+background: #fff;
+border-radius: $button-radius;
+box-shadow: none;
+transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+*/
 
-  [type="checkbox"]:not(:checked):focus + label:before,
-  [type="checkbox"]:not(:checked):focus {
-    background-color: $primary;
-    border-color: $primary;
-  }
 
 //===============
 // Media Queries
@@ -1030,7 +1075,7 @@ label {
   .button {
     height: 2.35rem;
     font-size: $size-6;
-    border-radius: $radius;
+    border-radius: $button-radius;
     padding-left: $button-padding-left-small;
     padding-right: $button-padding-left-small;
 
@@ -1058,7 +1103,10 @@ label {
 
   //Form fields
   input[type="text"],
-  input[type="number"] {
+  input[type="number"],
+  .select,
+  .select select {
+    width: 100%;
     font-size: $size-6;
   }
 
