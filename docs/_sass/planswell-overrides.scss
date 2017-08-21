@@ -7,6 +7,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+    font-size: 100%;
+}
+
 body {
   height: 100%;
   box-sizing: border-box;
@@ -818,6 +823,7 @@ label,
   .select select {
     border: none;
     border-bottom: 1px solid $grey-lighter;
+    box-shadow: none;
     font-size: $size-5;
     width: auto;
     color: $grey-dark;

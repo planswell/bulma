@@ -10019,6 +10019,10 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bulma :root {
+  font-size: 100%;
+}
+
 .bulma body {
   height: 100%;
   box-sizing: border-box;
@@ -10947,6 +10951,7 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
 .bulma .select select {
   border: none;
   border-bottom: 1px solid #d0d6d8;
+  box-shadow: none;
   font-size: 1.05rem;
   width: auto;
   color: #6c7375;
