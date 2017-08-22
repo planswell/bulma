@@ -10448,15 +10448,15 @@ html.bulma {
   margin: 0 auto;
 }
 
-.bulma button .is-primary.previous,
-.bulma .button .is-primary.previous {
+.bulma button.is-primary.previous,
+.bulma .button.is-primary.previous {
   background-color: transparent;
   border: 1px solid #17a65c;
   color: #17a65c;
 }
 
-.bulma button .is-primary.previous:hover,
-.bulma .button .is-primary.previous:hover {
+.bulma button.is-primary.previous:hover,
+.bulma .button.is-primary.previous:hover {
   border-color: #139652;
   color: #139652;
 }

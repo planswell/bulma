@@ -385,7 +385,7 @@ button,
     margin: 0 auto;
   }
 
-  .is-primary {
+  &.is-primary {
     &.previous {
       background-color: transparent;
       border: 1px solid $primary;
