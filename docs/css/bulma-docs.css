@@ -6,15 +6,6 @@ html.bulma {
 .bulma {
   /*! bulma.io v0.5.0 | MIT License | github.com/jgthms/bulma */
   /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
-  /*
-width: 1.65rem;
-height: 1.65rem;
-border: 2px solid $grey-lighter;
-background: #fff;
-border-radius: $button-radius;
-box-shadow: none;
-transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
-*/
 }
 
 @keyframes spinAround {
@@ -10013,10 +10004,6 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   margin-bottom: 3rem;
 }
 
-.bulma :root {
-  font-size: 100% !important;
-}
-
 .bulma html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
@@ -10096,7 +10083,7 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   font-size: 0.95rem;
 }
 
-.bulma p {
+.bulma p, .bulma code {
   font-size: 1.05rem;
 }
 
@@ -10459,6 +10446,11 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
 .bulma .button.is-button-centred {
   position: relative;
   margin: 0 auto;
+}
+
+.bulma button.is-link,
+.bulma .button.is-link {
+  color: #a6afb0;
 }
 
 .bulma button .icon .fa,
@@ -10892,8 +10884,7 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   color: #d0d6d8;
 }
 
-.bulma label,
-.bulma .label {
+.bulma label.label {
   display: inline-block;
   font-size: 0.85rem;
   color: #888f91;
@@ -10904,28 +10895,24 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   -o-transition: all 300ms ease;
 }
 
-.bulma label:hover,
-.bulma .label:hover {
+.bulma label.label:hover {
   color: #363636;
 }
 
-.bulma label.figure-right,
-.bulma .label.figure-right {
+.bulma label.label.figure-right {
   display: inline-block;
   color: #363636;
   float: right;
 }
 
-.bulma label.figure-right.is-goals,
-.bulma .label.figure-right.is-goals {
+.bulma label.label.figure-right.is-goals {
   display: inline-block;
   font-size: 0.95rem;
   width: 50%;
   height: auto;
 }
 
-.bulma label.figure-right.is-goals .root-goal,
-.bulma .label.figure-right.is-goals .root-goal {
+.bulma label.label.figure-right.is-goals .root-goal {
   font-weight: 700;
 }
 
@@ -10965,7 +10952,7 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
   border-bottom: 1px solid #d0d6d8;
   box-shadow: none;
   font-size: 1.05rem;
-  width: auto;
+  width: 100%;
   color: #6c7375;
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -11069,52 +11056,9 @@ transition: $transition-standard-ease; -webkit-transition: $transition-standard-
 
 .bulma input[type="radio"],
 .bulma input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  /*
-  & + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  & + label:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: text-top;
-    width: 1.35rem;
-    height: 1.35rem;
-    background: $white;
-    border-radius: $button-radius;
-  }
-  */
-}
-
-.bulma label.radio, .bulma label.checkbox {
-  font-size: 1.05rem;
-  position: relative;
-  cursor: pointer;
-  color: #6c7375;
-  padding: 0;
-}
-
-.bulma label.radio::before, .bulma label.checkbox::before {
-  content: '';
-  margin-right: 0.325rem;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 1.35rem;
-  height: 1.35rem;
-  background: #fff;
-  border: 1px solid #d0d6d8;
-  border-radius: 2.15rem;
-  padding: 0;
-}
-
-.bulma label.radio::before:checked, .bulma label.checkbox::before:checked {
-  background-color: #17a65c;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-right: 0.315rem;
 }
 
 @media screen and (min-height: 867px) and (max-height: 1900px) {

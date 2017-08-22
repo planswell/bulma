@@ -1,67 +1,53 @@
-/*Checkbox inputs*/
-  [type="checkbox"]:not(:checked),
-  [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px;
-  }
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  visibility: hidden;
 
-  [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
+/*
+  & + label {
     position: relative;
-    padding-left: 1.95em;
     cursor: pointer;
+    padding: 0;
   }
 
-  /* checkbox aspect */
-  [type="checkbox"]:not(:checked) + label:before,
-  [type="checkbox"]:checked + label:before {
+  & + label:before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.35em;
-    height: 1.35em;
-    border: 2px solid $grey-lighter;
-    background: #fff;
-    border-radius: 1.25em;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,.01);
-    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1.35rem;
+    height: 1.35rem;
+    background: $white;
+    border-radius: $button-radius;
   }
+  */
+}
 
-  /* checked mark aspect */
-  /*[type="checkbox"]:not(:checked) + label:after,*/
-  [type="checkbox"]:checked + label:after {
-    position: absolute;
-    content: $check-mark-white;
-    width: 12px;
-    height: 7px;
-    top: -0.225rem;
-    left: 0.40rem;
-    transition: all 200ms;
-  }
+label {
+  &.radio,
+  &.checkbox {
+    font-size: $size-5;
+    position: relative;
+    cursor: pointer;
+    color: $grey-dark;
+    padding: 0;
 
-  /* checked mark aspect changes */
-  [type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-    transform: scale(0);
-  }
-  [type="checkbox"]:checked + label:after {
-    opacity: 1;
-    transform: scale(1);
-  }
+    &::before {
+      content: '';
+      margin-right: 0.325rem;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 1.35rem;
+      height: 1.35rem;
+      background: $white;
+      border: 1px solid $grey-lighter;
+      border-radius: $button-radius;
+      padding: 0;
 
-  /* accessibility */
-  [type="checkbox"]:checked:focus + label:before {
-    background-color: $white;
+      &:checked {
+        background-color: $primary;
+      }
+    }
   }
-
-  [type="checkbox"]:checked:focus + label:before {
-    background-color: $primary;
-    border-color: $primary;
-  }
-
-  [type="checkbox"]:not(:checked):focus + label:before,
-  [type="checkbox"]:not(:checked):focus {
-    background-color: $primary;
-    border-color: $primary;
-  }
+}

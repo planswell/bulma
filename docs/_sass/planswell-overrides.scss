@@ -2,9 +2,6 @@
 //==================//
 // Global
 //==================//
-:root {
-    font-size: 100% !important;
-}
 
 html {
   font-size: 100%;
@@ -54,7 +51,7 @@ h3 { font-size: $size-3; }
 h4 { font-size: $size-4; }
 h5 { font-size: $size-5; }
 h6 { font-size: $size-6; }
-p  { font-size: $size-5; }
+p, code  { font-size: $size-5; }
 
 //Text Utility classes
 .is-centred-text {text-align: center;}
@@ -386,6 +383,10 @@ button,
   &.is-button-centred {
     position: relative;
     margin: 0 auto;
+  }
+
+  &.is-link {
+    color: $grey-light;
   }
 
   .icon .fa {
@@ -771,8 +772,8 @@ textarea {
 }
 
 // Radio inputs
-label,
-.label {
+label {
+ &.label {
   display: inline-block;
   font-size: $size-7;
   color: $grey;
@@ -800,6 +801,7 @@ label,
     }
   }
 }
+}
 //Form elements
 //
 //Text inputs
@@ -822,23 +824,23 @@ label,
     }
   }
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
   }
 
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="password"],
-  .select select {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+.select select {
     border: none;
     border-bottom: 1px solid $grey-lighter;
     box-shadow: none;
     font-size: $size-5;
-    width: auto;
+    width: 100%;
     color: $grey-dark;
     transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
@@ -909,68 +911,10 @@ label,
 //Checkbox & Radio inputs
 input[type="radio"],
 input[type="checkbox"] {
-  position: absolute; // take it out of document flow
-  opacity: 0; // hide it
-  visibility: hidden;
-
-/*
-  & + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  & + label:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: text-top;
-    width: 1.35rem;
-    height: 1.35rem;
-    background: $white;
-    border-radius: $button-radius;
-  }
-  */
+  width: $size-5;
+  height: $size-5;
+  margin-right: 0.315rem;
 }
-
-label {
-  &.radio,
-  &.checkbox {
-    font-size: $size-5;
-    position: relative;
-    cursor: pointer;
-    color: $grey-dark;
-    padding: 0;
-
-    &::before {
-      content: '';
-      margin-right: 0.325rem;
-      display: inline-block;
-      vertical-align: text-top;
-      width: 1.35rem;
-      height: 1.35rem;
-      background: $white;
-      border: 1px solid $grey-lighter;
-      border-radius: $button-radius;
-      padding: 0;
-
-      &:checked {
-        background-color: $primary;
-      }
-    }
-  }
-}
-
-/*
-width: 1.65rem;
-height: 1.65rem;
-border: 2px solid $grey-lighter;
-background: #fff;
-border-radius: $button-radius;
-box-shadow: none;
-transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
-*/
-
 
 //===============
 // Media Queries
