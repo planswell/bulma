@@ -2,14 +2,14 @@
 //==================//
 // Global
 //==================//
+:root {
+    font-size: 100% !important;
+}
+
 html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
-    font-size: 100%;
 }
 
 body {
@@ -160,6 +160,19 @@ a {
       float: right;
     }
   }
+}
+
+//SurveyJS panel
+.panel {
+  display: block;
+  background-color: $white;
+  max-width: 660px;
+  width: 660px;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+  overflow: scroll;
 }
 
 section{
