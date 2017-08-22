@@ -160,18 +160,6 @@ a {
 }
 
 //SurveyJS panel
-.panel {
-  display: block;
-  background-color: $white;
-  max-width: 660px;
-  width: 660px;
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-  box-shadow: $box-shadow;
-  overflow: scroll;
-}
-
 section{
   &.main-column {
     display: block;

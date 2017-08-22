@@ -10215,18 +10215,6 @@ html.bulma {
   float: right;
 }
 
-.bulma .panel {
-  display: block;
-  background-color: #fff;
-  max-width: 660px;
-  width: 660px;
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-  box-shadow: 0 2px 14px rgba(61, 66, 67, 0.15);
-  overflow: scroll;
-}
-
 .bulma section.main-column {
   display: block;
   background-color: #fff;
