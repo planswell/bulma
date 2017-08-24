@@ -7608,12 +7608,12 @@ label.panel-block:hover {
 }
 
 .hero.is-light.is-bold {
-  background-image: linear-gradient(141deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
+  background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-light.is-bold .nav-menu {
-    background-image: linear-gradient(141deg, #dfd8d8 0%, whitesmoke 71%, white 100%);
+    background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%);
   }
 }
 
@@ -7704,12 +7704,12 @@ label.panel-block:hover {
 }
 
 .hero.is-dark.is-bold {
-  background-image: linear-gradient(141deg, #1f1919 0%, #363636 71%, #463f3f 100%);
+  background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%);
 }
 
 @media screen and (max-width: 768px) {
   .hero.is-dark.is-bold .nav-menu {
-    background-image: linear-gradient(141deg, #1f1919 0%, #363636 71%, #463f3f 100%);
+    background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%);
   }
 }
 
@@ -10219,7 +10219,13 @@ a.additional-toggle::after {
 
 .panel {
   box-shadow: 0 2px 14px rgba(61, 66, 67, 0.15);
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.panel.main-column-centred {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 3rem 4.5rem 5rem;
 }
 
 .panel .field {
@@ -11127,6 +11133,13 @@ input[type="checkbox"] {
     height: 165px;
   }
   .box.is-three-quarter-width {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .panel.main-column-centred {
+    padding: 1.5rem 1.5rem 2rem;
     width: 100%;
   }
 }

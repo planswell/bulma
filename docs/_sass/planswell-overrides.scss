@@ -167,14 +167,18 @@ a {
 
 .panel {
   box-shadow: $box-shadow;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+
+  &.main-column-centred {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 3rem 4.5rem 5rem;
+  }
 
   .field {
     overflow: hidden;
   }
 }
-
-//SurveyJS panel
 
 label.radio.is-large, label.checkbox {
   height: 2.7rem;
@@ -997,10 +1001,17 @@ input[type="checkbox"] {
   }
 }
 
-// // Mobile
-// @media screen and (max-width: $mobile) {
-//   //Global
-//   //Structure & Layout
+// Mobile
+@media screen and (max-width: $mobile) {
+
+  //Structure & Layout
+  .panel {
+    &.main-column-centred {
+      padding: 1.5rem 1.5rem 2rem;
+      width: 100%;
+    }
+  }
+
 //   .header {
 //     height: 3.75rem;
 //     padding: 1.15rem 1.15rem 1.25rem;
@@ -1101,4 +1112,4 @@ input[type="checkbox"] {
 //     min-width: 48px;
 //     width: 48px;
 //   }
-// }
+}
