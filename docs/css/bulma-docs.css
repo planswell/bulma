@@ -10222,7 +10222,13 @@ html {
 
 .bulma .panel {
   box-shadow: 0 2px 14px rgba(61, 66, 67, 0.15);
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.bulma .panel.main-column-centred {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 3rem 4.5rem 5rem;
 }
 
 .bulma .panel .field {
@@ -11130,6 +11136,13 @@ html {
     height: 165px;
   }
   .bulma .box.is-three-quarter-width {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .bulma .panel.main-column-centred {
+    padding: 1.5rem 1.5rem 2rem;
     width: 100%;
   }
 }
