@@ -10189,7 +10189,7 @@ a.additional-toggle::after {
 }
 
 .header {
-  position: fixed;
+  position: relative;
   width: inherit;
   background-color: #fff;
   height: 4.25rem;
@@ -10223,6 +10223,7 @@ a.additional-toggle::after {
 }
 
 .panel.main-column-centred {
+  width: 660px;
   max-width: 660px;
   margin: 0 auto;
   padding: 3rem 4.5rem 5rem;
@@ -10489,6 +10490,12 @@ button .icon:first-child:last-child,
 button .icon:first-child:last-child.icon-right,
 .button .icon:first-child:last-child.icon-right {
   margin-left: 4px;
+}
+
+button.delete,
+.button.delete {
+  padding-left: 0rem;
+  padding-right: 0rem;
 }
 
 .is-outlined {

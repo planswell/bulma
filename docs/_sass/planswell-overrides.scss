@@ -136,7 +136,7 @@ a {
 //Structure & Grid
 //==================//
 .header {
-  position: fixed;
+  position: relative;
   width: inherit;
   background-color: $white;
   height: 4.25rem;
@@ -170,6 +170,7 @@ a {
   padding: 1.5rem 1.5rem 2rem;
 
   &.main-column-centred {
+    width: 660px;
     max-width: 660px;
     margin: 0 auto;
     padding: 3rem 4.5rem 5rem;
@@ -358,6 +359,7 @@ section{
 //==================//
 
 //Button types
+
 button,
 .button{
   background-color: $primary;
@@ -425,6 +427,11 @@ button,
     &.icon-right {
       margin-left: 4px;
     }
+  }
+
+  &.delete {
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }
 
