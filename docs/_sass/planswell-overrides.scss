@@ -524,20 +524,14 @@ button,
   }
 }
 
-.button-next-wrapper {
-  display: block;
-  height: 48px;
-  margin-bottom: 1.25rem;
+.is-button-next {
+  position: relative;
+  float: right;
+  padding-right: 1.45rem;
 
-  .is-button-next {
-    position: relative;
-    float: right;
-    padding-right: 1.45rem;
-
-    &::after {
-      content: '→';
-      padding-left: 6px;
-    }
+  &::after {
+    content: '→';
+    padding-left: 6px;
   }
 }
 

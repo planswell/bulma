@@ -10594,19 +10594,13 @@ html {
   justify-content: center;
 }
 
-.bulma .button-next-wrapper {
-  display: block;
-  height: 48px;
-  margin-bottom: 1.25rem;
-}
-
-.bulma .button-next-wrapper .is-button-next {
+.bulma .is-button-next {
   position: relative;
   float: right;
   padding-right: 1.45rem;
 }
 
-.bulma .button-next-wrapper .is-button-next::after {
+.bulma .is-button-next::after {
   content: '→';
   padding-left: 6px;
 }
