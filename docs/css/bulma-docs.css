@@ -10305,7 +10305,7 @@ html {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border: 1px solid #d0d6d8;
-  border-radius: 6px;
+  border-radius: 0.325rem;
   margin-bottom: 1rem;
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -10816,7 +10816,6 @@ html {
 
 .bulma .field:not(:last-child) {
   margin-bottom: 0;
-  border-bottom: 1px solid #d0d6d8;
 }
 
 .bulma .field:first-child {
@@ -10892,7 +10891,7 @@ html {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border: 1px solid #d0d6d8;
-  border-radius: 6px;
+  border-radius: 0.325rem;
   margin-bottom: 1rem;
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -10971,14 +10970,19 @@ html {
 .bulma input[type="number"],
 .bulma input[type="email"],
 .bulma input[type="password"],
-.bulma .select select {
+.bulma .select,
+.bulma .select select,
+.bulma select {
   border: none;
   box-sizing: content-box;
   border-bottom: 1px solid #d0d6d8;
+  border-radius: 0px;
   box-shadow: none;
   font-size: 1.45rem;
   width: 100%;
+  background-color: #fff;
   color: #6c7375;
+  margin-bottom: 20px;
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -10989,7 +10993,9 @@ html {
 .bulma input[type="number"]::placeholder,
 .bulma input[type="email"]::placeholder,
 .bulma input[type="password"]::placeholder,
-.bulma .select select::placeholder {
+.bulma .select::placeholder,
+.bulma .select select::placeholder,
+.bulma select::placeholder {
   color: #888f91;
 }
 
@@ -10997,7 +11003,9 @@ html {
 .bulma input[type="number"]:focus,
 .bulma input[type="email"]:focus,
 .bulma input[type="password"]:focus,
-.bulma .select select:focus {
+.bulma .select:focus,
+.bulma .select select:focus,
+.bulma select:focus {
   color: #6c7375;
   box-shadow: 0;
   outline: none;
@@ -11008,7 +11016,9 @@ html {
 .bulma input[type="number"].is-success,
 .bulma input[type="email"].is-success,
 .bulma input[type="password"].is-success,
-.bulma .select select.is-success {
+.bulma .select.is-success,
+.bulma .select select.is-success,
+.bulma select.is-success {
   color: #17a65c;
 }
 
@@ -11016,7 +11026,9 @@ html {
 .bulma input[type="number"].is-danger,
 .bulma input[type="email"].is-danger,
 .bulma input[type="password"].is-danger,
-.bulma .select select.is-danger {
+.bulma .select.is-danger,
+.bulma .select select.is-danger,
+.bulma select.is-danger {
   color: #da511b;
 }
 
@@ -11027,8 +11039,12 @@ html {
 .bulma input[type="email"].is-danger:focus,
 .bulma input[type="password"].is-success:focus,
 .bulma input[type="password"].is-danger:focus,
+.bulma .select.is-success:focus,
+.bulma .select.is-danger:focus,
 .bulma .select select.is-success:focus,
-.bulma .select select.is-danger:focus {
+.bulma .select select.is-danger:focus,
+.bulma select.is-success:focus,
+.bulma select.is-danger:focus {
   color: #363636;
 }
 
@@ -11036,7 +11052,9 @@ html {
 .bulma input[type="number"].three-figure-value,
 .bulma input[type="email"].three-figure-value,
 .bulma input[type="password"].three-figure-value,
-.bulma .select select.three-figure-value {
+.bulma .select.three-figure-value,
+.bulma .select select.three-figure-value,
+.bulma select.three-figure-value {
   width: 33px;
   min-width: 33px;
 }
@@ -11045,8 +11063,18 @@ html {
 .bulma input[type="number"].three-figure-value::placeholder,
 .bulma input[type="email"].three-figure-value::placeholder,
 .bulma input[type="password"].three-figure-value::placeholder,
-.bulma .select select.three-figure-value::placeholder {
+.bulma .select.three-figure-value::placeholder,
+.bulma .select select.three-figure-value::placeholder,
+.bulma select.three-figure-value::placeholder {
   color: #6c7375;
+}
+
+.bulma select {
+  border-radius: 0px;
+}
+
+.bulma select.select {
+  border-radius: 0px;
 }
 
 .bulma .input[type="text-area"],

@@ -250,7 +250,7 @@ section{
       width: 100%;
       padding: 0.65rem 0.85rem;
       border: 1px solid $grey-lighter;
-      border-radius: 6px;
+      border-radius: $button-radius-tiny;
       margin-bottom: 1rem;
       transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
@@ -708,7 +708,7 @@ ul.portfolio-allocation-breakdown {
 
 .field:not(:last-child) {
   margin-bottom: 0;
-  border-bottom: 1px solid $grey-lighter;
+  //border-bottom: 1px solid $grey-lighter;
 }
 .field:first-child {
   padding-top: 0;
@@ -782,7 +782,7 @@ textarea {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border: 1px solid $grey-lighter;
-  border-radius: 6px;
+  border-radius: $button-radius-tiny;
   margin-bottom: 1rem;
   transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
@@ -859,63 +859,77 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
-.select select {
-    border: none;
-    box-sizing: content-box;
-    border-bottom: 1px solid $grey-lighter;
-    box-shadow: none;
-    font-size: $size-5;
-    width: 100%;
+.select,
+.select select,
+select {
+  border: none;
+  box-sizing: content-box;
+  border-bottom: 1px solid $grey-lighter;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: $size-5;
+  width: 100%;
+  background-color: $white;
+  color: $grey-dark;
+  margin-bottom: 20px;
+  transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
     color: $grey-dark;
-    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+    box-shadow: 0;
+    outline: none;
+    border-bottom: 1px solid $primary;
+  }
+
+  &.is-success {
+      color: $primary;
+  }
+
+  &.is-danger {
+    color: $insurance-hover;
+  }
+
+  &.is-success:focus,
+  &.is-danger:focus {
+    color: $grey-darker;
+  }
+
+  &.three-figure-value {
+      width: 33px;
+      min-width: 33px;
 
     &::placeholder {
-      color: $grey;
-    }
-
-    &:focus {
-      color: $grey-dark;
-      box-shadow: 0;
-      outline: none;
-      border-bottom: 1px solid $primary;
-    }
-
-    &.is-success {
-        color: $primary;
-    }
-
-    &.is-danger {
-      color: $insurance-hover;
-    }
-
-    &.is-success:focus,
-    &.is-danger:focus {
-      color: $grey-darker;
-    }
-
-    &.three-figure-value {
-        width: 33px;
-        min-width: 33px;
-
-        &::placeholder {
-          color: $grey-dark;
-        }
-    }
-  }
-
-  .input[type="text-area"],
-  .textarea {
-    box-shadow: none;
-    border-color: $grey-lighter;
-
-    &:focus {
       color: $grey-dark;
     }
   }
+}
 
-  .input {
-    height: 1.05em;
+//Select
+select {
+  border-radius: 0px;
+
+  &.select {
+    border-radius: 0px;
   }
+}
+
+.input[type="text-area"],
+.textarea {
+  box-shadow: none;
+  border-color: $grey-lighter;
+
+  &:focus {
+    color: $grey-dark;
+  }
+}
+
+.input {
+  height: 1.05em;
+}
 
 // Form helpers
 .help {
