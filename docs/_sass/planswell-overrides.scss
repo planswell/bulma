@@ -861,7 +861,8 @@ input[type="email"],
 input[type="password"],
 .select select {
     border: none;
-    box-sizing: content-box;
+    // Avoid scroll bars on all inputs
+    box-sizing: border-box;
     border-bottom: 1px solid $grey-lighter;
     box-shadow: none;
     font-size: $size-5;
