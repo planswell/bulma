@@ -173,7 +173,7 @@ a {
     width: 660px;
     max-width: 660px;
     margin: 0 auto;
-    padding: 3rem 4.5rem 5rem;
+    padding: 4rem 5.5rem 5rem;
   }
 
   .field {
@@ -309,6 +309,20 @@ section{
 }
 
 //Footer
+.footer {
+  padding: 3rem 1.5rem 5rem;
+}
+
+.progress-sjs {
+  margin: 45px 0 25px !important;
+  height: 8px;
+
+  &.progress-bar-sjs {
+    height: 8px;
+  }
+}
+
+/*
 .survey-footer {
   width: inherit;
   background-color: rgba(255, 255, 255, 0.9);
@@ -353,6 +367,7 @@ section{
     color: $grey-lighter;
   }
 }
+*/
 
 //==================//
 //Buttons

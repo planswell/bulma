@@ -10226,7 +10226,7 @@ a.additional-toggle::after {
   width: 660px;
   max-width: 660px;
   margin: 0 auto;
-  padding: 3rem 4.5rem 5rem;
+  padding: 4rem 5.5rem 5rem;
 }
 
 .panel .field {
@@ -10364,53 +10364,65 @@ section .container {
   transform: translate(-5px);
 }
 
+.footer {
+  padding: 3rem 1.5rem 5rem;
+}
+
+.progress-sjs {
+  margin: 45px 0 25px !important;
+  height: 8px;
+}
+
+.progress-sjs.progress-bar-sjs {
+  height: 8px;
+}
+
+/*
 .survey-footer {
   width: inherit;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1.5rem 3.65rem 7.75rem 3.65rem;
   position: fixed;
   bottom: 0;
-  border-top: 1px solid #f7f8f8;
+  border-top: 1px solid $white-smoke;
   z-index: 2;
-}
 
-.survey-footer .footer-link-wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  margin-bottom: 1rem;
-}
+  .footer-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-bottom: 1rem;
 
-.survey-footer .footer-link-wrapper a.details-toggle {
-  padding-top: 10px;
-  color: #a6afb0;
-  transition: all 300ms ease;
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-}
+    a.details-toggle {
+      padding-top: 10px;
+      color: $grey-light;
+      transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
-.survey-footer .footer-link-wrapper a.details-toggle:hover {
-  color: #888f91;
-}
+      &:hover {
+        color: $grey;
+      }
+    }
+  }
 
-.survey-footer .progress-bar {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 8px;
-  border-radius: 8px;
-  background-color: #f7f8f8;
-}
+  //Progress bar
+  .progress-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background-color: $white-smoke;
+  }
 
-.survey-footer .progress-tip {
-  display: inline-block;
-  float: left;
-  margin-top: 6px;
-  font-size: 1.35rem;
-  color: #d0d6d8;
+  .progress-tip {
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+    font-size: $size-6;
+    color: $grey-lighter;
+  }
 }
-
+*/
 button,
 .button {
   background-color: #17a65c;
