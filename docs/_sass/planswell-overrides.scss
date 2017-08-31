@@ -42,7 +42,7 @@ h4, h5, p {line-height: $line-height-large;}
 h1, h2, h3, h4, h5, h6 { font-weight: $weight-bold;}
 
 h1, h2, h3, h4 { color: $black; }
-h5 { color: $grey; }
+h5 { color: $grey-dark; }
 p { color: $grey-dark; }
 
 h1 { font-size: $size-1; }
@@ -170,10 +170,10 @@ a {
   padding: 1.5rem 1.5rem 2rem;
 
   &.main-column-centred {
-    width: 660px;
-    max-width: 660px;
+    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 4rem 5.5rem 5rem;
+    padding: 4rem 4.5rem 5rem;
   }
 
   .field {
@@ -240,7 +240,7 @@ section{
 
     h5 {
       margin-top: 1.25rem;
-      color: $grey-light;
+      color: $grey;
       text-align: center;
     }
 

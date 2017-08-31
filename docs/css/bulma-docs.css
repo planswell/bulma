@@ -10049,7 +10049,7 @@ h1, h2, h3, h4 {
 }
 
 h5 {
-  color: #888f91;
+  color: #6c7375;
 }
 
 p {
@@ -10223,10 +10223,10 @@ a.additional-toggle::after {
 }
 
 .panel.main-column-centred {
-  width: 660px;
-  max-width: 660px;
+  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 4rem 5.5rem 5rem;
+  padding: 4rem 4.5rem 5rem;
 }
 
 .panel .field {
@@ -10292,7 +10292,7 @@ section .container {
 
 .modal-wrapper .modal-window h5 {
   margin-top: 1.25rem;
-  color: #a6afb0;
+  color: #888f91;
   text-align: center;
 }
 
