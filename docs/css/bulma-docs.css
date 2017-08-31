@@ -10378,8 +10378,7 @@ section .container {
 }
 
 .progress-bar-sjs.span {
-  display: none;
-  visibility: hidden;
+  font-size: 1px;
 }
 
 /*
