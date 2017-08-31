@@ -315,15 +315,6 @@ section{
 
 .progress-sjs {
   margin: 45px 0 25px !important;
-  height: 8px;
-}
-
-.progress-bar-sjs {
-  height: 8px;
-
-  &.span {
-    font-size: 1px;
-  }
 }
 
 /*
@@ -892,6 +883,8 @@ input[type="password"],
     width: 100%;
     color: $grey-dark;
     transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+    padding-left: 4px;
+    padding-right: 4px;
 
   &::placeholder {
     color: $grey;
