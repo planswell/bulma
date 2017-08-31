@@ -859,20 +859,16 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
-.select,
-.select select,
-select {
-  border: none;
-  box-sizing: content-box;
-  border-bottom: 1px solid $grey-lighter;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: $size-5;
-  width: 100%;
-  background-color: $white;
-  color: $grey-dark;
-  margin-bottom: 20px;
-  transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
+.select select {
+    border: none;
+    // Avoid scroll bars on all inputs
+    box-sizing: border-box;
+    border-bottom: 1px solid $grey-lighter;
+    box-shadow: none;
+    font-size: $size-5;
+    width: 100%;
+    color: $grey-dark;
+    transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
 
   &::placeholder {
     color: $grey;
