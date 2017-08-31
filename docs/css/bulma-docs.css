@@ -10373,8 +10373,13 @@ section .container {
   height: 8px;
 }
 
-.progress-sjs.progress-bar-sjs {
+.progress-bar-sjs {
   height: 8px;
+}
+
+.progress-bar-sjs.span {
+  display: none;
+  visibility: hidden;
 }
 
 /*
@@ -10949,6 +10954,10 @@ label.label.figure-right.is-goals .root-goal {
   font-weight: 700;
 }
 
+.input {
+  height: 1.45em;
+}
+
 .value-right {
   float: right;
 }
@@ -11074,10 +11083,6 @@ select.select {
 .input[type="text-area"]:focus,
 .textarea:focus {
   color: #6c7375;
-}
-
-.input {
-  height: 1.45em;
 }
 
 .help {

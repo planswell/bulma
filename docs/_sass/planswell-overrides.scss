@@ -316,9 +316,14 @@ section{
 .progress-sjs {
   margin: 45px 0 25px !important;
   height: 8px;
+}
 
-  &.progress-bar-sjs {
-    height: 8px;
+.progress-bar-sjs {
+  height: 8px;
+
+  &.span {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -845,6 +850,10 @@ label {
 //Form elements
 //
 //Text inputs
+.input {
+  height: 1.45em;
+}
+
 .value-right {
     float: right;
 
@@ -936,10 +945,6 @@ select {
   &:focus {
     color: $grey-dark;
   }
-}
-
-.input {
-  height: 1.45em;
 }
 
 // Form helpers
