@@ -11101,6 +11101,7 @@ input[type="radio"],
 input[type="checkbox"] {
   width: 1.45rem;
   height: 1.45rem;
+  margin: 0.01rem;
   margin-right: 0.315rem;
 }
 
