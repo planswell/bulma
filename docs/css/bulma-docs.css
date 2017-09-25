@@ -10516,6 +10516,26 @@ button.delete,
   border-color: #139652;
 }
 
+.is-outlined.is-primary.is-outlined:hover {
+  color: #139652;
+  border-color: #139652;
+}
+
+.is-outlined.is-info.is-outlined:hover {
+  color: #1259af;
+  border-color: #1259af;
+}
+
+.is-outlined.is-success.is-outlined:hover {
+  color: #139652;
+  border-color: #139652;
+}
+
+.is-outlined.is-danger.is-outlined:hover {
+  color: #cf5220;
+  border-color: #cf5220;
+}
+
 .is-outlined.is-investments {
   color: #166cd4;
   border-color: #166cd4;
@@ -10523,7 +10543,12 @@ button.delete,
 
 .is-outlined.is-investments:hover {
   color: #1259af;
-  border-color: #1259af;
+  border-color: #166cd4;
+}
+
+.is-outlined.is-investments.is-outlined:hover {
+  color: #1259af;
+  border-color: #166cd4;
 }
 
 .is-outlined.is-insurance {
@@ -10535,6 +10560,11 @@ button.delete,
   border-color: #cf5220;
 }
 
+.is-outlined.is-insurance.is-outlined:hover {
+  color: #cf5220;
+  border-color: #e5622e;
+}
+
 .is-outlined.is-borrowing {
   color: #e5a434;
   border-color: #ffbc47;
@@ -10544,12 +10574,22 @@ button.delete,
   border-color: #cf5220;
 }
 
+.is-outlined.is-borrowing.is-outlined:hover {
+  color: #e5a434;
+  border-color: #ffbc47;
+}
+
 .is-outlined.is-grey {
   color: #a6afb0;
   border-color: #d0d6d8;
 }
 
 .is-outlined.is-grey:hover {
+  color: #888f91;
+  border-color: #a6afb0;
+}
+
+.is-outlined.is-grey.is-grey.is-outlined:hover {
   color: #888f91;
   border-color: #a6afb0;
 }
