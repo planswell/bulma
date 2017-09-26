@@ -455,10 +455,6 @@ button,
     color: $primary-dark;
     border-color: $primary-dark;
   }
-  &.is-primary { &.is-outlined { &:hover {color: $primary-dark; border-color: $primary-dark;} }}
-  &.is-info { &.is-outlined { &:hover {color: $investments-hover; border-color: $investments-hover;} }}
-  &.is-success { &.is-outlined { &:hover {color: $primary-dark; border-color: $primary-dark;} }}
-  &.is-danger { &.is-outlined { &:hover {color: $insurance-dark; border-color: $insurance-dark;} }}
 
   &.is-investments {
     color: $investments;
@@ -469,7 +465,6 @@ button,
       border-color: $investments;
     }
   }
-  &.is-investments { &.is-outlined { &:hover {color: $investments-hover; border-color: $investments;} }}
 
   &.is-insurance {
     color: $insurance-dark;
@@ -479,7 +474,6 @@ button,
       border-color: $insurance-dark;
     }
   }
-  &.is-insurance { &.is-outlined { &:hover {color: $insurance-dark; border-color: $insurance;} }}
 
   &.is-borrowing {
     color: $borrowing-dark;
@@ -489,7 +483,6 @@ button,
       border-color: $insurance-dark;
     }
   }
-  &.is-borrowing { &.is-outlined { &:hover {color: $borrowing-dark; border-color: $borrowing;} }}
 
   &.is-grey {
     color: $grey-light;
@@ -499,9 +492,18 @@ button,
       color: $grey;
       border-color: $grey-light;
     }
-    &.is-grey { &.is-outlined { &:hover {color: $grey; border-color: $grey-light;} }}
   }
 }
+
+//Outlined button hover text colouring
+.button.is-primary.is-outlined:hover {color: $primary-dark;}
+.button.is-investments.is-outlined:hover {color: $investments-hover;}
+.button.is-insurance.is-outlined:hover {color: $insurance-hover;}
+.button.is-borrowing.is-outlined:hover {color: $borrowing-hover;}
+.button.is-success.is-outlined:hover {color: $primary-dark;}
+.button.is-info.is-outlined:hover {color: $investments-hover;}
+.button.is-danger.is-outlined:hover {color: $insurance-hover;}
+.button.is-grey.is-outlined:hover {color: $grey;}
 
 //Button colour variations
 .is-investments {
