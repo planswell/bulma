@@ -852,7 +852,7 @@ label {
 //
 //Text inputs
 .input {
-  height: 1.45em;
+  min-height: 1.45em;
 }
 
 .value-right {
@@ -893,6 +893,7 @@ input[type="password"],
     font-size: $size-5;
     width: 100%;
     min-height: 26px;
+    height: auto;
     color: $grey-dark;
     transition: $transition-standard-ease; -webkit-transition: $transition-standard-ease; -moz-transition: $transition-standard-ease; -o-transition: $transition-standard-ease;
     padding-left: 4px;
