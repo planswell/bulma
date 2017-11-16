@@ -287,6 +287,12 @@ section{
   }
 }
 
+.modal-close,
+.modal-close.is-large {
+  padding: 0;
+  margin: 0 20px;
+}
+
 //Back button
 .back-button-wrapper {
   display: block;
