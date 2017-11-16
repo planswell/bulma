@@ -10340,6 +10340,12 @@ section .container {
   justify-content: space-between;
 }
 
+.modal-close,
+.modal-close.is-large {
+  padding: 0;
+  margin: 0 20px;
+}
+
 .back-button-wrapper {
   display: block;
   width: 100%;
